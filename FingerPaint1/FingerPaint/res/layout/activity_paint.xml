@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PaintActivity" >
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:layout_gravity="center"
+    android:orientation="horizontal" >
+</LinearLayout>
+
+ <com.UTD.fingerpaint.PaintView
+    android:id="@+id/paintview"
+    android:layout_width="fill_parent"
+    android:layout_height="350dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="0dp"
+    android:layout_weight="1"
+    android:background="#FFFFFFFF" />
+
+ <Button
+     android:id="@+id/button1"
+     style="?android:attr/buttonStyleSmall"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignLeft="@+id/paintview"
+     android:layout_below="@+id/paintview"
+     android:layout_alignParentBottom="false"
+     android:layout_marginTop="12dp"
+     android:background="#FF0000"
+     android:onClick="colorClick"
+     android:text="Red" />
+
+ <Button
+     android:id="@+id/btnGreen"
+     style="?android:attr/buttonStyleSmall"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignBaseline="@+id/button1"
+     android:layout_alignBottom="@+id/button1"
+     android:layout_marginLeft="12dp"
+     android:layout_toRightOf="@+id/button1"
+     android:background="#00FF00"
+     android:onClick="colorClick"
+     android:text="Grn" />
+
+ <Button
+     android:id="@+id/btnBlue"
+     style="?android:attr/buttonStyleSmall"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignTop="@+id/btnGreen"
+     android:layout_marginLeft="12dp"
+     android:layout_toRightOf="@+id/btnGreen"
+     android:background="#0000FF"
+     android:onClick="colorClick"
+     android:text="Blue" />
+
+ <Button
+     android:id="@+id/btnBlack"
+     style="?android:attr/buttonStyleSmall"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignBaseline="@+id/btnBlue"
+     android:layout_alignBottom="@+id/btnBlue"
+     android:layout_marginLeft="12dp"
+     android:layout_toRightOf="@+id/btnBlue"
+     android:background="#000000"
+     android:onClick="colorClick"
+     android:text="Blk" />
+
+ <SeekBar
+     android:id="@+id/ctlWidth"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_alignParentLeft="true"
+     android:layout_below="@+id/button1"
+     android:layout_marginTop="32dp"
+     android:max="19" />
+
+</RelativeLayout>
